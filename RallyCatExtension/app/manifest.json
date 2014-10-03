@@ -1,0 +1,24 @@
+{
+    "manifest_version": 2,
+    "name": "RallyCat Extensions",
+    "description": "This extension hyperlinkify your rally items",
+    "version": "1.0",
+    "content_security_policy": "script-src 'self' https://*.jquery.com; object-src 'self'",
+
+    "permissions": [
+        "https://*.rallydev.com/*"
+    ],
+    "content_scripts": [
+        {
+            "js": [ "jquery-1.11.1.min.js", "popup.js", "options.js" ],
+            "matches": [ "http://*/*", "https://*/*" ]
+        }
+    ],
+    "options_page": "options.html",
+  "browser_action": {
+    "default_icon": "img/icon.png",
+    "default_popup": "popup.html"
+    
+
+  }
+}
